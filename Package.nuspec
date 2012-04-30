@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Restful.Web.Client</id>
+    <version>1.0.0.1</version>
+    <authors>Ben Keeping</authors>
+    <owners>Ben Keeping</owners>
+    <projectUrl>http://github.com/benjaminkeeping/Restful.Web.Client</projectUrl>
+    <description>Provides an http client for communicating with restful web services</description>
+    <copyright>Copyright Ben Keeping 2012</copyright>
+    <dependencies>
+      <dependency id="Restful.Wiretypes" version="1.0.0.0" />
+    </dependencies>
+    
+  </metadata>
+</package>
