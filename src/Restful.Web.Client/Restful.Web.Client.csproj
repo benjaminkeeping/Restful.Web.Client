@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client\JsonWebClient.cs" />
+    <Compile Include="Errors\Http404.cs" />
     <Compile Include="Headers\NoOpHeaderAppender.cs" />
     <Compile Include="Errors\Http400.cs" />
     <Compile Include="Errors\Http401.cs" />

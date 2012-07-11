@@ -141,6 +141,7 @@ namespace Restful.Web.Client.Client
             if (status == HttpStatusCode.BadRequest) return new Http400(errors);
             if (status == HttpStatusCode.Unauthorized) return new Http401(errors);
             if (status == HttpStatusCode.Forbidden) return new Http403(errors);
+            if (status == HttpStatusCode.NotFound) return new Http404(errors);
             return new Http500(errors);
 
         }
