@@ -5,7 +5,7 @@ namespace Restful.Web.Client.Errors
     public class Http403 : HttpError
     {
         public Http403(IEnumerable<Error> errors)
-            : base(errors)
+            : base(errors, 403)
         {
         }
     }

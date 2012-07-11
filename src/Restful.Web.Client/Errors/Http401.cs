@@ -6,7 +6,7 @@ namespace Restful.Web.Client.Errors
     public class Http401 : HttpError
     {
         public Http401(IEnumerable<Error> errors)
-            : base(errors)
+            : base(errors, 401)
         {
         }
     }

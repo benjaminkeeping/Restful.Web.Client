@@ -5,7 +5,7 @@ namespace Restful.Web.Client.Errors
 {
     public class Http400 : HttpError
     {
-        public Http400(IEnumerable<Error> errors) : base(errors)
+        public Http400(IEnumerable<Error> errors) : base(errors, 400)
         {
         }
     }
