@@ -7,6 +7,7 @@ using System.Text;
 using Newtonsoft.Json;
 using Restful.Web.Client.Errors;
 using Restful.Web.Client.Headers;
+using Restful.Wiretypes;
 
 namespace Restful.Web.Client.Client
 {
@@ -98,7 +99,7 @@ namespace Restful.Web.Client.Client
             var response = ((WebException)exception).Response;
             if (response == null)
             {
-                return new HttpWebResponseWasNull(url);
+                return new Http500(new[] { new Error { Key = "Message", Value = exception.Message}, });
             }
 
             var status = ((HttpWebResponse)response).StatusCode;
@@ -137,7 +138,7 @@ namespace Restful.Web.Client.Client
             request.ContentType = _contentType;
             _headerAppender.AppendTo(request);
             request.Method = method;
-            request.KeepAlive = true;
+            request.KeepAlive = false;
             return request;
         }
 
