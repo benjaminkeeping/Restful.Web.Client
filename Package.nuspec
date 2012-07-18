@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Restful.Web.Client</id>
-    <version>1.0.0.4</version>
+    <version>1.0.0.5</version>
     <authors>Ben Keeping</authors>
     <owners>Ben Keeping</owners>
     <projectUrl>http://github.com/benjaminkeeping/Restful.Web.Client</projectUrl>
