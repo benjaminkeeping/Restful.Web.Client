@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net;
 using Restful.Wiretypes;
 using Restful.Web.Client.Errors;
@@ -142,6 +143,8 @@ namespace Restful.Web.Client.Client
             if (status == HttpStatusCode.Unauthorized) return new Http401(errors);
             if (status == HttpStatusCode.Forbidden) return new Http403(errors);
             if (status == HttpStatusCode.NotFound) return new Http404(errors);
+            if (errors == null || errors.Count == 0) errors = new List<Error> { new Error { Key = "Message", Value = body } };
+            else if (errors.First() == null) errors = new List<Error> { new Error { Key = "Message", Value = body } };
             return new Http500(errors);
 
         }
